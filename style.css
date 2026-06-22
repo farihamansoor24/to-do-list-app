@@ -1,0 +1,315 @@
+/* ===== Global ===== */
+body {
+  background: #f6f7fb;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+}
+
+.container {
+  max-width: 950px;
+  margin-top: 20px;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(135deg, #6c63ff, #8e7dff, #a18fff);
+  color: white;
+  flex-wrap: wrap;  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.app-title {
+  color: #6c63ff;
+  margin-bottom: 6px;
+}
+
+.header-left h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+}
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.header-left p {
+  margin: 4px 0 10px;
+  font-size: 13px;
+}
+.header-left h1,
+.header-left p,
+.app-title {
+  color: #ffffff;
+}
+
+.mini-stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.mini-stats span {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.mini-stats .pending {
+  background: rgba(255, 193, 7, 0.25);
+  color: #fff;
+}
+
+.mini-stats .completed {
+  background: rgba(25, 135, 84, 0.25);
+  color: #fff;
+}
+
+.icon-bell {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+/* .header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: right;
+} */
+
+.user-info p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.header-right i {
+  color: white;
+  font-size: 18px;
+}
+
+.header-right img {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+}
+
+/* ===== Stats Cards ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stats .card {
+  background: linear-gradient(135deg,#6366F1,#8B5CF6);;
+  border: none;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  color: white;
+}
+
+.stats .card:hover {
+  transform: translateY(-4px);
+}
+
+.stats .card i {
+  font-size: 22px;
+  color: #6c63ff;
+}
+
+.stats .card h2 {
+  margin: 8px 0 0;
+}
+
+/* ===== Add Task ===== */
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-task input,
+.add-task select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+#addBtn {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#addBtn:hover {
+  background: #5548e0;
+}
+
+/* ===== Search ===== */
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+/* ===== Filters ===== */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #f1f3f6;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.filters .active {
+  background: #6c63ff;
+  color: white;
+}
+
+/* ===== Tasks ===== */
+.task-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.task-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.task-card span {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Priority colors */
+.high { background: #ffe0e0; color: #d60000; }
+.medium { background: #fff3cd; color: #856404; }
+.low { background: #d1e7dd; color: #0f5132; }
+
+/* Actions */
+.actions i {
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.actions i:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Message ===== */
+#msg {
+  min-height: 20px;
+}
+
+/* ===== Modal ===== */
+.modal-content {
+  border-radius: 14px;
+}
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+/* Responsive */
+
+@media(max-width:765px){
+
+    body{
+        padding:20px;
+    }
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+    .header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: right;
+
+    width: 100%;
+    justify-content: space-between;
+  }
+    .stats{
+        grid-template-columns:1fr;
+    }   
+    .add-task{
+        flex-direction:column;
+    }
+
+    .task-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+}
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 14px;
+  }
+
+  .mini-stats {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .profile-img {
+    width: 40px;
+    height: 40px;
+  }
+}
