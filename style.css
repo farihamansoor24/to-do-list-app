@@ -148,7 +148,7 @@ body {
   gap: 10px;
   margin-bottom: 15px;
 }
-#to-do-input {
+#todo-input {
   flex: 1;
 }
 .add-task input,
