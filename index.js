@@ -266,5 +266,5 @@ document.getElementById('search-input')?.addEventListener('input', (e) => {
 });
 loadTasks(tasks);
 currentDate();
-updateHeaderStats();
+// updateHeaderStats();
 

@@ -279,24 +279,20 @@ body {
     width: 100%;
     justify-content: space-between;
   }
-    .stats{
-        grid-template-columns:1fr;
-    }   
+   
     .add-task{
         flex-direction:column;
     }
 
-    .task-card{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:15px;
-    }
+   
 }
 @media (max-width: 480px) {
   .app-title {
     font-size: 14px;
   }
-
+   .stats{
+        grid-template-columns:1fr;
+    } 
   .mini-stats {
     flex-wrap: wrap;
     gap: 6px;
@@ -312,4 +308,11 @@ body {
     width: 40px;
     height: 40px;
   }
+}
+@media (max-width: 350px) {
+ .task-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
 }
