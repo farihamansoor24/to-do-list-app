@@ -170,6 +170,7 @@ localStorage.setItem("tasks", JSON.stringify(tasks));
 // -----------------------------------------------------------------------------
     currentTask.querySelector("h3").textContent = editInput.value;
     currentTask.querySelector("span").className = document.getElementById("editPrioritySelect").value;
+    currentTask.querySelector("span").textContent = document.getElementById("editPrioritySelect").value.tocapitalizeFirstLetter();
     const action = document.getElementsByName("action");
     currentTask.querySelectorAll("i")[2].className = action[0].checked ? "bi bi-circle complete-icon" : "bi bi-check-circle-fill complete-icon";
 
