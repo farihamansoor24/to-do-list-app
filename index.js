@@ -224,7 +224,7 @@ function setGreeting() {
     if (hour >= 12 && hour < 17) greet = "Good Afternoon";
     else if (hour >= 17) greet = "Good Evening";
 
-    document.getElementById("greeting").textContent = `👋 ${greet}, User`;
+    document.getElementById("greeting").innerHTML = `${greet}, <img src="https://i.pravatar.cc/50" alt="profile">`;
 }
 
 function filterTasks(status) {
@@ -269,5 +269,6 @@ document.getElementById('search-input')?.addEventListener('input', (e) => {
 });
 loadTasks(tasks);
 currentDate();
+setGreeting();
 // updateHeaderStats();
 
