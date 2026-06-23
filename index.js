@@ -229,6 +229,7 @@ function setGreeting() {
 
 function filterTasks(status) {
      container.innerHTML = '';
+     document.getElementById("msg").textContent = '';
     if(status=='all'){
         console.log(tasks);
         loadTasks(tasks);
@@ -258,6 +259,7 @@ document.getElementById('completed-btn').addEventListener('click', (e) => {
     document.getElementById('pending-btn').classList.remove('active');
 });
 function searchTasks(inputValue){
+    document.getElementById("msg").textContent = '';
     const searchedTasks = tasks.filter(task => task.text.toLowerCase().includes(inputValue.toLowerCase()));
     container.innerHTML = '';
     loadTasks(searchedTasks);
