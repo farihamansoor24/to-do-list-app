@@ -148,7 +148,9 @@ body {
   gap: 10px;
   margin-bottom: 15px;
 }
-
+#to-do-input {
+  flex: 1;
+}
 .add-task input,
 .add-task select {
   padding: 10px;
@@ -158,6 +160,7 @@ body {
 }
 
 #addBtn {
+  flex-shrink: 0;
   background: #6c63ff;
   color: white;
   border: none;
